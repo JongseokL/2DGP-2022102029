@@ -79,8 +79,8 @@ def move_AtoB():
 
 def move_triangle():
   print('TRIANGLE')
-  # move_AtoB()
-  # move_BtoC()
+  move_AtoB()
+  move_BtoC()
   move_CtoA()
   pass
 
