@@ -23,7 +23,6 @@ def move_circle():
     update_canvas()
     delay(0.01)
     pass
-
 def draw_top():
   print('TOP')
   for x in range(50, 750, 5):
@@ -61,10 +60,6 @@ def move_triangle():
   pass
 
 
-while True:
-  # move_circle()
-  move_rectangle()
-  move_triangle()
-  pass
+draw_top()
 
 close_canvas()
