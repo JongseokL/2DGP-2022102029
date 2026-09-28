@@ -9,7 +9,7 @@ def draw_character(x, y):
     clear_canvas()
     character.draw(x, y)
     update_canvas()
-    delay(0.01)
+    delay(0.02)
 
 def move_circle():
   print('CIRCLE')
@@ -88,7 +88,6 @@ def move_triangle():
 while True:
   move_triangle()
   move_rectangle()
-  move_circle()
   move_circle()
   pass
 
