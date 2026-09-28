@@ -20,7 +20,7 @@ def move_circle():
     y = 300 + 200 * math.sin(theta)
     draw_character(x, y)
     pass
-  
+
 def draw_top():
   print('TOP')
   for x in range(50, 750, 5):
@@ -51,6 +51,19 @@ def move_rectangle():
   draw_top()
   draw_right()
   draw_bottom()
+  pass
+
+
+def move_CtoB():
+  print('CtoB')
+  pass
+
+def move_BtoA():
+  print('BtoA')
+  pass
+
+def move_AtoC():
+  print('AtoB')
   pass
 
 def move_triangle():
