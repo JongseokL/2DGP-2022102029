@@ -29,6 +29,11 @@ def draw_character(x):
 
 def draw_left():
   print('LEFT')
+  for y in range(50, 550, 5):
+    clear_canvas()
+    character.draw(50, y)
+    update_canvas()
+    delay(0.01)
   pass
 
 def draw_bottom():
@@ -41,8 +46,8 @@ def draw_right():
 
 def move_rectangle():
   print('RECTANGLE')
-  draw_top()
   draw_left()
+  draw_top()
   draw_bottom()
   draw_right()
   pass
