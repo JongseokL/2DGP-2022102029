@@ -18,11 +18,9 @@ def move_circle():
     theta = math.radians(degree)
     x = 400 + 200 * math.cos(theta)
     y = 300 + 200 * math.sin(theta)
-    clear_canvas()
-    character.draw(x, y)
-    update_canvas()
-    delay(0.01)
+    draw_character(x, y)
     pass
+  
 def draw_top():
   print('TOP')
   for x in range(50, 750, 5):
@@ -60,6 +58,10 @@ def move_triangle():
   pass
 
 
-draw_top()
+while True:
+  move_circle()
+  move_rectangle()
+  move_triangle()
+  pass
 
 close_canvas()
