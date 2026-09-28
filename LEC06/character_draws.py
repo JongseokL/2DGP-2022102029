@@ -59,7 +59,7 @@ def move_line(x0, y0, x1, y1):
     t = step / n
     x = x0 + (x1 - x0) * t
     y = y0 + (y1 - y0) * t
-    draw_character()
+    draw_character(x, y)
 
 
 def move_CtoA():
@@ -72,13 +72,14 @@ def move_BtoC():
 
 def move_AtoB():
   print('AtoB')
+  move_line(100, 100, 700, 100)
   pass
 
 def move_triangle():
   print('TRIANGLE')
   move_AtoB()
-  move_BtoC()
-  move_CtoA()
+  # move_BtoC()
+  # move_CtoA()
   pass
 
 
