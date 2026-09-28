@@ -89,6 +89,7 @@ while True:
   move_triangle()
   move_rectangle()
   move_circle()
+  move_circle()
   pass
 
 close_canvas()
