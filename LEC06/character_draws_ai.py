@@ -33,6 +33,29 @@ def move_rectangle():
 		draw_character(50, y)
 
 
+def move_line(start, end):
+	start_x, start_y = start
+	end_x, end_y = end
+	distance = math.hypot(end_x - start_x, end_y - start_y)
+	steps = max(1, int(distance / 5))
+
+	for step in range(steps + 1):
+		t = step / steps
+		x = start_x + (end_x - start_x) * t
+		y = start_y + (end_y - start_y) * t
+		draw_character(x, y)
+
+
+def move_triangle():
+	point_a = (100, 100)
+	point_b = (700, 100)
+	point_c = (400, 500)
+	move_line(point_a, point_b)
+	move_line(point_b, point_c)
+	move_line(point_c, point_a)
+
+
 move_circle()
 move_rectangle()
+move_triangle()
 close_canvas()
