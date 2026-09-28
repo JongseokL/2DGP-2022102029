@@ -53,24 +53,32 @@ def move_rectangle():
   draw_bottom()
   pass
 
+def move_line(x0, y0, x1, y1):
+  n = 120
+  for step in range(n+1):
+    t = step / n
+    x = x0 + (x1 - x0) * t
+    y = y0 + (y1 - y0) * t
+    draw_character()
 
-def move_CtoB():
-  print('CtoB')
+
+def move_CtoA():
+  print('CtoA')
   pass
 
-def move_BtoA():
-  print('BtoA')
+def move_BtoC():
+  print('BtoC')
   pass
 
-def move_AtoC():
+def move_AtoB():
   print('AtoB')
   pass
 
 def move_triangle():
   print('TRIANGLE')
-  move_CtoB()
-  move_BtoA()
-  move_AtoC()
+  move_AtoB()
+  move_BtoC()
+  move_CtoA()
   pass
 
 
