@@ -5,9 +5,27 @@ import math
 open_canvas(800, 600)
 character = load_image('character.png')
 
+def move_circle():
+  print('CIRCLE')
+  # 캐릭터 이미지 표시
+  for degree in range(360):
+    theta = math.radians(degree)
+    x = 400 + 200 * math.cos(theta)
+    y = 300 + 200 * math.sin(theta)
+    draw_character
+    pass
+
 def draw_top():
   print('TOP')
+  for x in range(50, 750, 5):
+    draw_character(x)
   pass
+
+def draw_character(x):
+    clear_canvas()
+    character.draw(x, 550)
+    update_canvas()
+    delay(0.01)
 
 def draw_left():
   print('LEFT')
@@ -20,20 +38,6 @@ def draw_bottom():
 def draw_right():
   print('BOTTOM')
   pass
-
-
-def move_circle():
-  print('CIRCLE')
-  # 캐릭터 이미지 표시
-  for degree in range(360):
-    theta = math.radians(degree)
-    x = 400 + 200 * math.cos(theta)
-    y = 300 + 200 * math.sin(theta)
-    clear_canvas()
-    character.draw(x, y)
-    update_canvas()
-    delay(0.01)
-    pass
 
 def move_rectangle():
   print('RECTANGLE')
@@ -49,8 +53,9 @@ def move_triangle():
 
 
 while True:
-  move_circle()
+  # move_circle()
   move_rectangle()
   move_triangle()
+  pass
 
 close_canvas()
