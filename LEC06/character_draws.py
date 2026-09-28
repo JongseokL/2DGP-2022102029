@@ -68,6 +68,7 @@ def move_CtoA():
 
 def move_BtoC():
   print('BtoC')
+  move_line(700, 100, 400, 500)
   pass
 
 def move_AtoB():
@@ -77,8 +78,8 @@ def move_AtoB():
 
 def move_triangle():
   print('TRIANGLE')
-  move_AtoB()
-  # move_BtoC()
+  # move_AtoB()
+  move_BtoC()
   # move_CtoA()
   pass
 
