@@ -68,12 +68,15 @@ def move_AtoC():
 
 def move_triangle():
   print('TRIANGLE')
+  move_CtoB()
+  move_BtoA()
+  move_AtoC()
   pass
 
 
 while True:
-  move_circle()
-  move_rectangle()
+  # move_circle()
+  # move_rectangle()
   move_triangle()
   pass
 
