@@ -5,12 +5,10 @@ open_canvas()
 background = load_image('background.png')
 character = load_image('animation_sheet_hw.png')
 
-frame = 4
-
 for x in range(400, 800, 5):
     clear_canvas()
     background.draw(400, 300, 800, 600)
-    character.clip_draw(frame * 100, 0, 100, 100, x, 90)
+    character.clip_draw(0, 0, 100, 100, x, 90)
     update_canvas()
     delay (0.05)
 
