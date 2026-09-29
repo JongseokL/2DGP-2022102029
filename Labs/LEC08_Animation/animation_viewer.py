@@ -14,11 +14,15 @@ frames = [
     (995, 785, 135, 210)
 ]
 
+frame = 0
+
 for x in range(100, 700, 5):
     clear_canvas()
     background.draw(400, 300, 800, 600)
-    character.clip_draw(45, 785, 120, 210, x, 300, 85, 150)
+    sx, sy, sw, sh = frames[frame]
+    character.clip_draw(sx, sy, sw, sh, x, 300, 85, 150)
     update_canvas()
+    frame = (frame + 1) % 6
     delay (0.05)
 
 close_canvas()
