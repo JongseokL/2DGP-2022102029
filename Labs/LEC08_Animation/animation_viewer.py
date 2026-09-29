@@ -14,6 +14,17 @@ walk_frames = [
     (995, 785, 135, 210)
 ]
 
+run_frames = [
+    (45,   530, 160, 220),
+    (230,  530, 170, 220),
+    (420,  530, 160, 220),
+    (605,  528, 155, 225),
+    (775,  525, 180, 230),
+    (975,  528, 160, 225),
+    (1160, 530, 170, 220),
+    (1355, 530, 160, 220)
+]
+
 frame = 0
 
 for x in range(100, 700, 5):
@@ -30,6 +41,17 @@ for x in range (700, 100, -5):
     background.draw(400, 300, 800, 600)
     wx, wy, ww, wh = walk_frames[frame]
     character.clip_composite_draw(wx, wy, ww, wh, 0, 'h', x, 300, 85, 150)
+    update_canvas()
+    frame = (frame + 1) % 6
+    delay(0.05)
+
+frame = 0
+
+for x in range(100, 700, 10):
+    clear_canvas()
+    background.draw(400, 300, 800, 600)
+    rx, ry, rw, rh = run_frames[frame]
+    character.clip_draw(rx, ry, rw, rh, x, 300, 110, 150)
     update_canvas()
     frame = (frame + 1) % 6
     delay(0.05)
