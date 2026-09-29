@@ -95,6 +95,15 @@ for frame in range(5):
     update_canvas()
     delay(0.15)
 
+for frame in range(7):
+    clear_canvas()
+    background.draw(400, 300, 800, 600)
+
+    ax, ay, aw, ah = attack_frames[frame]
+    character.clip_draw(ax, ay, aw, ah, 400, 300, 200, 170)
+
+    update_canvas()
+    delay(0.12)
 
 
 close_canvas()
