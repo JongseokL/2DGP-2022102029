@@ -25,6 +25,14 @@ run_frames = [
     (1355, 530, 160, 220)
 ]
 
+jump_frames = [
+    (45,  260, 125, 165),
+    (255, 280, 165, 200),
+    (480, 325, 170, 190),
+    (685, 300, 170, 180),
+    (940, 260, 165, 165)
+]
+
 frame = 0
 
 for x in range(100, 700, 5):
@@ -53,16 +61,29 @@ for x in range(100, 700, 10):
     rx, ry, rw, rh = run_frames[frame]
     character.clip_draw(rx, ry, rw, rh, x, 300, 110, 150)
     update_canvas()
-    frame = (frame + 1) % 6
+    frame = (frame + 1) % 8
     delay(0.05)
 
-for x in range(700, 100, -10):
+for x in range(700, 300, -10):
     clear_canvas()
     background.draw(400, 300, 800, 600)
     rx, ry, rw, rh = run_frames[frame]
     character.clip_composite_draw(rx, ry, rw, rh, 0, 'h', x, 300, 110, 150)
     update_canvas()
-    frame = (frame + 1) % 6
+    frame = (frame + 1) % 8
     delay(0.05)
+
+jump_y = [300, 360, 420, 360, 300]
+
+for frame in range(5):
+    clear_canvas()
+    background.draw(400, 300, 800, 600)
+
+    jx, jy, jw, jh = jump_frames[frame]
+    character.clip_draw(jx, jy, jw, jh, 400, jump_y[frame], 110, 150)
+
+    update_canvas()
+    delay(0.15)
+
 
 close_canvas()
