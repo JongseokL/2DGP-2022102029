@@ -74,7 +74,7 @@ for x in range(100, 700, 10):
     frame = (frame + 1) % 8
     delay(0.05)
 
-for x in range(700, 300, -10):
+for x in range(700, 400, -10):
     clear_canvas()
     background.draw(400, 300, 800, 600)
     rx, ry, rw, rh = run_frames[frame]
@@ -94,6 +94,7 @@ for frame in range(5):
 
     update_canvas()
     delay(0.15)
+
 
 
 close_canvas()
