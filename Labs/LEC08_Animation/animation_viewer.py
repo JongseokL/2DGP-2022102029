@@ -56,4 +56,13 @@ for x in range(100, 700, 10):
     frame = (frame + 1) % 6
     delay(0.05)
 
+for x in range(700, 100, -10):
+    clear_canvas()
+    background.draw(400, 300, 800, 600)
+    rx, ry, rw, rh = run_frames[frame]
+    character.clip_composite_draw(rx, ry, rw, rh, 0, 'h', x, 300, 110, 150)
+    update_canvas()
+    frame = (frame + 1) % 6
+    delay(0.05)
+
 close_canvas()
