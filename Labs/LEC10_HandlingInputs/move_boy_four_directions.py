@@ -45,7 +45,10 @@ dir_x, dir_y = 0, 0
 while running:
     clear_canvas()
     tuk_ground.draw(TUK_WIDTH // 2, TUK_HEIGHT // 2)
-    character.clip_draw(frame * 100, 100, 100, 100, x, y)
+
+    moving = dir_x != 0 or dir_y != 0
+    animation_y = 100 if moving else 300
+    character.clip_draw(frame * 100, animation_y, 100, 100, x, y)
     update_canvas()
 
     handle_events()
