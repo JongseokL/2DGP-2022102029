@@ -1,6 +1,8 @@
 from pico2d import *
 
 TUK_WIDTH, TUK_HEIGHT = 1280, 1024
+CHARACTER_SIZE = 100
+CHARACTER_HALF = CHARACTER_SIZE // 2
 
 
 open_canvas(TUK_WIDTH, TUK_HEIGHT)
@@ -54,12 +56,17 @@ while running:
         animation_y = 100 if facing_right else 0
     else:
         animation_y = 300 if facing_right else 200
-    character.clip_draw(frame * 100, animation_y, 100, 100, x, y)
+    character.clip_draw(
+        frame * CHARACTER_SIZE, animation_y,
+        CHARACTER_SIZE, CHARACTER_SIZE, x, y
+    )
     update_canvas()
 
     handle_events()
     x += dir_x * 5
     y += dir_y * 5
+    x = max(CHARACTER_HALF, min(TUK_WIDTH - CHARACTER_HALF, x))
+    y = max(CHARACTER_HALF, min(TUK_HEIGHT - CHARACTER_HALF, y))
     frame = (frame + 1) % 8
     delay(0.05)
 
